@@ -1,0 +1,35 @@
+# Housing price Dataset#
+
+#import numpy as np
+import pandas as pd
+from autograd import numpy as np
+import autograd as grad
+from mlrefined_libraries import math_optimization_library as moptl 
+from mlrefined_libraries import superlearn_library as slib
+import matplotlib.pyplot as plt
+from matplotlib import gridspec
+
+#  Reading dataset from csv file  #
+
+Input_file = np.array(pd.read_csv('mlrefined_datasets/superlearn_datasets/boston_housing.csv'))
+print(Input_file.shape)
+print(type(Input_file))
+
+x = np.array([Input_file[0],Input_file[1],Input_file[2],Input_file[3],Input_file[4],Input_file[5],Input_file[6],Input_file[7],Input_file[8],Input_file[9],Input_file[10],Input_file[11],Input_file[12]]);
+#print(x[-1])
+#print(Input_file[-1])
+
+# Normalizing the dataset with Standard_normalization process
+
+def standard_normalizer(x):
+    #for i in range(np.len)
+    x_mean = np.mean(x)
+    x_std = np.std(x)
+    x_standard_normalizer = (x-x_mean)/x_std;
+    #print(x_standard_normalizer)
+    return(x_standard_normalizer);
+print(standard_normalizer(x).shape)
+
+x_p = standard_normalizer(x)
+
+print("Input x_p after applying standard normalization function",x_p);
