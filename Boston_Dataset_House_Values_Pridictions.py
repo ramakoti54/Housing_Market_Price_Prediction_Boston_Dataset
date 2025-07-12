@@ -65,7 +65,8 @@ def sine_function(w):
 '''def soft_max(w):
     x_softmax = np.log(1+np.exp(model(x,w)));
     return(x_softmax);    '''
-
+# Laplacian Distance between the point on Support vector machine/ the area above or below the rectangular plane to the support vector/Decision Boundary.
+# Formula for computing the Distance magnitude is in ||w|| and is equalent to sqrt(w1 2 + w2 2 + W3 2+ w4 2+w5 2+...+wn 2).
 def magnitude(w):
     w_mag = np.sqrt(w[1]**2+w[2]**2+w[3]**2+w[4]**2+w[5]**2+w[6]**2+w[7]**2+w[8]**2+w[9]**2+w[10]**2+w[11]**2+w[12]**2);
     print(w_mag)
